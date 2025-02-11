@@ -1,0 +1,63 @@
+[gd_scene load_steps=6 format=3 uid="uid://cs6bfyle5niv"]
+
+[ext_resource type="Texture2D" uid="uid://cw7vbl7mvsqew" path="res://icon.svg" id="1_3inee"]
+[ext_resource type="PackedScene" uid="uid://uvys73i5nw36" path="res://coin.tscn" id="2_rc3oo"]
+
+[sub_resource type="GDScript" id="GDScript_56t2d"]
+script/source = "extends CharacterBody2D
+
+
+const SPEED = 300.0
+const JUMP_VELOCITY = -400.0
+
+
+func _physics_process(delta: float) -> void:
+	# Add the gravity.
+	if not is_on_floor():
+		velocity += get_gravity() * delta
+
+	# Handle jump.
+	if Input.is_action_just_pressed(\"ui_accept\") and is_on_floor():
+		velocity.y = JUMP_VELOCITY
+
+	# Get the input direction and handle the movement/deceleration.
+	# As good practice, you should replace UI actions with custom gameplay actions.
+	var direction := Input.get_axis(\"ui_left\", \"ui_right\")
+	if direction:
+		velocity.x = direction * SPEED
+	else:
+		velocity.x = move_toward(velocity.x, 0, SPEED)
+
+	move_and_slide()
+"
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xdxbn"]
+radius = 40.0
+height = 96.0
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_op402"]
+b = Vector2(1175, 2)
+
+[node name="Main" type="Node2D"]
+
+[node name="Player" type="CharacterBody2D" parent="."]
+script = SubResource("GDScript_56t2d")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player"]
+position = Vector2(54, -57)
+scale = Vector2(0.734375, 0.765625)
+texture = ExtResource("1_3inee")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+position = Vector2(53, -56)
+shape = SubResource("CapsuleShape2D_xdxbn")
+
+[node name="Coin" parent="Player" instance=ExtResource("2_rc3oo")]
+position = Vector2(321, 76)
+
+[node name="Coin" parent="Player/Coin" instance=ExtResource("2_rc3oo")]
+position = Vector2(149, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2, 621)
+shape = SubResource("SegmentShape2D_op402")

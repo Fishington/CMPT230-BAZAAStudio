@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://uvys73i5nw36"]
+
+[ext_resource type="Texture2D" uid="uid://cbxuaor88o3yq" path="res://Assets/Sprite/Coin_Texture.png" id="1_04i75"]
+
+[sub_resource type="GDScript" id="GDScript_w515m"]
+script/source = "extends Area2D
+
+func _on_body_entered(body: Node) -> void:
+	if body.name == \"Player\":
+		queue_free()
+"
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lh7ma"]
+radius = 18.0
+height = 36.0
+
+[node name="Coin" type="Area2D"]
+script = SubResource("GDScript_w515m")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-1.90735e-06, 0)
+scale = Vector2(0.0641667, 0.0641667)
+texture = ExtResource("1_04i75")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_lh7ma")
