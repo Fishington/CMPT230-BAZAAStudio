@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://uvbs1rjb6k0a"
-path="res://.godot/imported/BurbRunning-Sheet.ase-07b024fd3789a2f3114c262dcf86b49d.ctex"
+uid="uid://blw80qddr4n8b"
+path="res://.godot/imported/BurbRunning-Sheet.png-f114f07b36f54f4991268c274e820be2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprite/BurbRunning-Sheet.ase"
-dest_files=["res://.godot/imported/BurbRunning-Sheet.ase-07b024fd3789a2f3114c262dcf86b49d.ctex"]
+source_file="res://Assets/Sprite/BurbRunning-Sheet.png"
+dest_files=["res://.godot/imported/BurbRunning-Sheet.png-f114f07b36f54f4991268c274e820be2.ctex"]
 
 [params]
 
