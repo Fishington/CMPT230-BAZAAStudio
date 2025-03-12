@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c1i3phiq5fwun"
-path="res://.godot/imported/BurbIdle-Sheet.ase-97e7bed178d3ecd8630a20f3db4f7e5d.ctex"
+uid="uid://b2glup2gekh24"
+path="res://.godot/imported/BurbIdle-Sheet.png-64ad252c35e2689220e40d56fdfd6966.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprite/BurbIdle-Sheet.ase"
-dest_files=["res://.godot/imported/BurbIdle-Sheet.ase-97e7bed178d3ecd8630a20f3db4f7e5d.ctex"]
+source_file="res://Assets/Sprite/BurbIdle-Sheet.png"
+dest_files=["res://.godot/imported/BurbIdle-Sheet.png-64ad252c35e2689220e40d56fdfd6966.ctex"]
 
 [params]
 
