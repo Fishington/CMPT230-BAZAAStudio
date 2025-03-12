@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=4 uid="uid://cs6bfyle5niv"]
+[gd_scene load_steps=8 format=4 uid="uid://cs6bfyle5niv"]
 
 [ext_resource type="Texture2D" uid="uid://dc6s6fs0irn0i" path="res://Assets/brackeys_platformer_assets/sprites/world_tileset.png" id="2_it4p2"]
 [ext_resource type="Texture2D" uid="uid://bvuseb58udbo" path="res://Assets/Kenny-Tiny-Town/Tilemap/tilemap_packed.png" id="3_57d3c"]
 [ext_resource type="PackedScene" uid="uid://dhkppmbnwlh25" path="res://Scenes/player.tscn" id="3_ica6v"]
+[ext_resource type="Texture2D" uid="uid://cbxuaor88o3yq" path="res://Assets/Sprite/Coin_Texture.png" id="4_r7rm5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1mrc0"]
 texture = ExtResource("2_it4p2")
@@ -346,3 +347,8 @@ position = Vector2(1, -47)
 zoom = Vector2(3.3, 3.3)
 position_smoothing_enabled = true
 position_smoothing_speed = 10.0
+
+[node name="CoinTexture" type="Sprite2D" parent="."]
+position = Vector2(311, -18)
+scale = Vector2(0.0316667, 0.0316667)
+texture = ExtResource("4_r7rm5")

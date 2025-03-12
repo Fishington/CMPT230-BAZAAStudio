@@ -1,6 +1,6 @@
 [gd_scene load_steps=20 format=3 uid="uid://dhkppmbnwlh25"]
 
-[ext_resource type="Script" path="res://Scripts/player.gd" id="1_rol52"]
+[ext_resource type="Script" uid="uid://c0vimap813wos" path="res://Scripts/player.gd" id="1_rol52"]
 [ext_resource type="Texture2D" uid="uid://c1i3phiq5fwun" path="res://Assets/Sprite/BurbIdle-Sheet.ase" id="2_dqj2x"]
 [ext_resource type="Texture2D" uid="uid://uvbs1rjb6k0a" path="res://Assets/Sprite/BurbRunning-Sheet.ase" id="3_3x11v"]
 
