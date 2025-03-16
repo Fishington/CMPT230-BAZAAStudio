@@ -2,12 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://db4235bv7hchl"
-valid=false
+uid="uid://b6ppdwwfuu72m"
+path="res://.godot/imported/scarecrowRunning.png-4a37fc8a7a697bf2cc7629d2d83a80fa.ctex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
-source_file="res://Assets/Sprite/MrGearWing.aseprite"
+source_file="res://Assets/Sprite/scarecrowRunning.png"
+dest_files=["res://.godot/imported/scarecrowRunning.png-4a37fc8a7a697bf2cc7629d2d83a80fa.ctex"]
 
 [params]
 

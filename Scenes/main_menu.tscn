@@ -1,9 +1,28 @@
 [gd_scene load_steps=4 format=3 uid="uid://bxyh22da6o5gr"]
 
 [ext_resource type="Texture2D" uid="uid://cbqb3xbmb3l53" path="res://Assets/Sprite/TitleScreenPixelated.png" id="1_rnxd2"]
-[ext_resource type="Script" uid="uid://78fh1qd8nx4i" path="res://Scenes/start_button.gd" id="1_uifba"]
 
 [sub_resource type="Theme" id="Theme_8is06"]
+
+[sub_resource type="GDScript" id="GDScript_28flt"]
+script/source = "extends Button
+
+
+
+
+func _on_pressed() -> void:
+	pass # Replace with function body.
+
+
+func _on_exit_button_pressed() -> void:
+	get_tree().quit()
+	pass # Replace with function body.
+
+
+func _on_start_pressed() -> void:
+	get_tree().change_scene_to_file(\"res://Scenes/level_select.tscn\")
+	pass # Replace with function body.
+"
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -21,24 +40,34 @@ scale = Vector2(0.670833, 0.668519)
 texture = ExtResource("1_rnxd2")
 
 [node name="StartButton" type="Button" parent="."]
-layout_mode = 0
-offset_left = 516.0
-offset_top = 364.0
-offset_right = 757.0
-offset_bottom = 427.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.17
+anchor_top = 0.213
+anchor_right = 0.25
+anchor_bottom = 0.25
+offset_left = 0.461365
+offset_top = 0.230042
+offset_right = -1.14502
+offset_bottom = 0.039978
 theme = SubResource("Theme_8is06")
 text = "Start"
-script = ExtResource("1_uifba")
+script = SubResource("GDScript_28flt")
 
 [node name="ExitButton" type="Button" parent="."]
-layout_mode = 0
-offset_left = 516.0
-offset_top = 470.0
-offset_right = 757.0
-offset_bottom = 533.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.17
+anchor_top = 0.275
+anchor_right = 0.25
+anchor_bottom = 0.312
+offset_left = 0.461365
+offset_top = 0.343964
+offset_right = -1.14502
+offset_bottom = 0.15387
 theme = SubResource("Theme_8is06")
 text = "Quit"
-script = ExtResource("1_uifba")
+script = SubResource("GDScript_28flt")
 
 [node name="Container" type="Container" parent="."]
 layout_mode = 0

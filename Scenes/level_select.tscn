@@ -1,0 +1,101 @@
+[gd_scene load_steps=3 format=3 uid="uid://c68wgybvdl4ng"]
+
+[ext_resource type="Texture2D" uid="uid://cbqb3xbmb3l53" path="res://Assets/Sprite/TitleScreenPixelated.png" id="1_nkys2"]
+[ext_resource type="Script" uid="uid://1f3vv8fa1ap5" path="res://level_select.gd" id="2_lx4vd"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(640.25, 360)
+scale = Vector2(0.666406, 0.666667)
+texture = ExtResource("1_nkys2")
+
+[node name="Level 1" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.161
+anchor_top = 0.506
+anchor_right = 0.286
+anchor_bottom = 0.728
+offset_left = -0.0800171
+offset_top = -5.32004
+offset_right = -0.0800171
+offset_bottom = -5.16003
+theme_override_font_sizes/font_size = 100
+text = "1"
+script = ExtResource("2_lx4vd")
+
+[node name="Level 2" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.347
+anchor_top = 0.5
+anchor_right = 0.472
+anchor_bottom = 0.721
+offset_left = -0.160004
+offset_top = -1.0
+offset_right = -0.160034
+offset_bottom = -0.119995
+theme_override_font_sizes/font_size = 100
+text = "2"
+script = ExtResource("2_lx4vd")
+
+[node name="Level 3" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.521
+anchor_top = 0.499
+anchor_right = 0.646
+anchor_bottom = 0.721
+offset_left = 0.119995
+offset_top = -0.279999
+offset_right = 0.119995
+offset_bottom = -0.119995
+theme_override_font_sizes/font_size = 100
+text = "3"
+script = ExtResource("2_lx4vd")
+
+[node name="Level 4" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.705
+anchor_top = 0.5
+anchor_right = 0.83
+anchor_bottom = 0.721
+offset_left = -0.400024
+offset_top = -1.0
+offset_right = -0.400024
+offset_bottom = -0.119995
+theme_override_font_sizes/font_size = 100
+text = "4"
+script = ExtResource("2_lx4vd")
+
+[node name="Back" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.816
+anchor_top = 0.835
+anchor_right = 0.941
+anchor_bottom = 0.942
+offset_left = -0.480103
+offset_top = -0.200012
+offset_right = -0.480103
+offset_bottom = -0.240051
+theme_override_font_sizes/font_size = 50
+text = "Back"
+script = ExtResource("2_lx4vd")
+
+[connection signal="pressed" from="Level 1" to="Level 1" method="_on_level_1_pressed"]
+[connection signal="pressed" from="Level 1" to="Level 1" method="_on_pressed"]
+[connection signal="pressed" from="Level 2" to="Level 1" method="_on_level_2_pressed"]
+[connection signal="pressed" from="Level 2" to="Level 2" method="_on_pressed"]
+[connection signal="pressed" from="Level 3" to="Level 1" method="_on_level_3_pressed"]
+[connection signal="pressed" from="Level 3" to="Level 3" method="_on_pressed"]
+[connection signal="pressed" from="Back" to="Level 1" method="_on_back_pressed"]
+[connection signal="pressed" from="Back" to="Back" method="_on_pressed"]
