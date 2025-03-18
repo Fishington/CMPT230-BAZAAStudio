@@ -51,6 +51,7 @@ offset_top = 0.230042
 offset_right = -1.14502
 offset_bottom = 0.039978
 theme = SubResource("Theme_8is06")
+theme_override_font_sizes/font_size = 40
 text = "Start"
 script = SubResource("GDScript_28flt")
 
@@ -66,6 +67,7 @@ offset_top = 0.343964
 offset_right = -1.14502
 offset_bottom = 0.15387
 theme = SubResource("Theme_8is06")
+theme_override_font_sizes/font_size = 40
 text = "Quit"
 script = SubResource("GDScript_28flt")
 
@@ -74,7 +76,7 @@ layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[connection signal="pressed" from="StartButton" to="StartButton" method="_on_pressed"]
 [connection signal="pressed" from="StartButton" to="StartButton" method="_on_start_pressed"]
+[connection signal="pressed" from="StartButton" to="StartButton" method="_on_pressed"]
 [connection signal="pressed" from="ExitButton" to="StartButton" method="_on_exit_button_pressed"]
 [connection signal="pressed" from="ExitButton" to="ExitButton" method="_on_pressed"]

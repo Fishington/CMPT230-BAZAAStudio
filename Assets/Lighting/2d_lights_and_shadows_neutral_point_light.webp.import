@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://db4235bv7hchl"
-path="res://.godot/imported/MrGearWing.aseprite-797bf95ff2dba5d6bbdab644f0576ab9.ctex"
+uid="uid://d2q3qwvax3n8a"
+path="res://.godot/imported/2d_lights_and_shadows_neutral_point_light.webp-f8ac9fe1e71ee526eef0333756d7584b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprite/MrGearWing.aseprite"
-dest_files=["res://.godot/imported/MrGearWing.aseprite-797bf95ff2dba5d6bbdab644f0576ab9.ctex"]
+source_file="res://Assets/Lighting/2d_lights_and_shadows_neutral_point_light.webp"
+dest_files=["res://.godot/imported/2d_lights_and_shadows_neutral_point_light.webp-f8ac9fe1e71ee526eef0333756d7584b.ctex"]
 
 [params]
 

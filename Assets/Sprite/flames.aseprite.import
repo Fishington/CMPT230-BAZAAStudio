@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://db4235bv7hchl"
-path="res://.godot/imported/MrGearWing.aseprite-797bf95ff2dba5d6bbdab644f0576ab9.ctex"
+uid="uid://mctdicuak5s4"
+path="res://.godot/imported/flames.aseprite-0691fb9d4ace3cf62c96cd1d0cecda9d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprite/MrGearWing.aseprite"
-dest_files=["res://.godot/imported/MrGearWing.aseprite-797bf95ff2dba5d6bbdab644f0576ab9.ctex"]
+source_file="res://Assets/Sprite/flames.aseprite"
+dest_files=["res://.godot/imported/flames.aseprite-0691fb9d4ace3cf62c96cd1d0cecda9d.ctex"]
 
 [params]
 
