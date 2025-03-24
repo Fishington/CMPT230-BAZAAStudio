@@ -2,12 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://db4235bv7hchl"
-valid=false
+uid="uid://crekr22xae452"
+path="res://.godot/imported/fibIdle-Sheet.png-96f428e2031f140837d775262ab58c95.ctex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
-source_file="res://Assets/Sprite/MrGearWing.aseprite"
+source_file="res://Assets/Sprite/fibIdle-Sheet.png"
+dest_files=["res://.godot/imported/fibIdle-Sheet.png-96f428e2031f140837d775262ab58c95.ctex"]
 
 [params]
 

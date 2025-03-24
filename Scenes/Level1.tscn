@@ -1,12 +1,13 @@
-[gd_scene load_steps=17 format=4 uid="uid://cs6bfyle5niv"]
+[gd_scene load_steps=18 format=4 uid="uid://cs6bfyle5niv"]
 
 [ext_resource type="Texture2D" uid="uid://dc6s6fs0irn0i" path="res://Assets/brackeys_platformer_assets/sprites/world_tileset.png" id="1_jghel"]
 [ext_resource type="Texture2D" uid="uid://bvuseb58udbo" path="res://Assets/Kenny-Tiny-Town/Tilemap/tilemap_packed.png" id="2_slnnj"]
 [ext_resource type="PackedScene" uid="uid://dhkppmbnwlh25" path="res://Scenes/player.tscn" id="3_t3or0"]
-[ext_resource type="Script" uid="uid://btl35s0o2xh8r" path="res://Scripts/fib_P2.gd" id="4_slnnj"]
+[ext_resource type="Script" path="res://Scripts/fib_P2.gd" id="4_slnnj"]
 [ext_resource type="Texture2D" uid="uid://cbxuaor88o3yq" path="res://Assets/Sprite/Coin_Texture.png" id="4_ysn8j"]
 [ext_resource type="Texture2D" uid="uid://d2q3qwvax3n8a" path="res://Assets/Lighting/2d_lights_and_shadows_neutral_point_light.webp" id="5_t3or0"]
 [ext_resource type="Texture2D" uid="uid://bb83rdk303cd7" path="res://Assets/Sprite/flames-Sheet.png" id="7_ysn8j"]
+[ext_resource type="PackedScene" uid="uid://bnlb2k8sxegro" path="res://Scenes/player2.tscn" id="8_all0w"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1mrc0"]
 texture = ExtResource("1_jghel")
@@ -393,14 +394,13 @@ position = Vector2(16, -8)
 tile_map_data = PackedByteArray("AAD+/wQAAAACAAQAAAD+/wYAAAADAAcAAAD+/wcAAAADAAcAAAD+/wgAAAADAAcAAAABAAUAAAAGAAYAAAD6/wIAAAAGAAYAAAD3////AAAGAAYAAAD9//z/AAAGAAYAAAD3/wgAAAAGAAYAAAABAAgAAAAIAAgAAAD///v/AAAIAAgAAAAHAAUAAAAIAAYAAAAKAAIAAAAIAAYAAAAPAP//AAAIAAYAAAAFAPv/AAAIAAYAAAAPAAgAAAAIAAYAAAAIAAgAAAAFAAUAAAAIAAcAAAAFAAQAAAAIAAYAAAAFAAQAAAAIAAUAAAAFAAQAAAAIAAQAAAAFAAMAAAA=")
 tile_set = SubResource("TileSet_msqgc")
 
-[node name="Player2" parent="." instance=ExtResource("3_t3or0")]
-position = Vector2(232, 134)
-rotation = 3.14159
-scale = Vector2(1, -1)
+[node name="Player3" parent="." instance=ExtResource("8_all0w")]
+position = Vector2(232, 130)
+safe_margin = 5.0
 script = ExtResource("4_slnnj")
 
-[node name="PointLight2D2" type="PointLight2D" parent="Player2"]
-position = Vector2(-3.8147e-06, -9)
+[node name="PointLight2D2" type="PointLight2D" parent="Player3"]
+position = Vector2(0, -5)
 rotation = -3.14159
 scale = Vector2(0.150591, -0.157283)
 color = Color(0.989662, 0.720667, 0.65213, 1)

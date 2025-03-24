@@ -1,6 +1,6 @@
 [gd_scene load_steps=20 format=3 uid="uid://dhkppmbnwlh25"]
 
-[ext_resource type="Script" uid="uid://c0vimap813wos" path="res://Scripts/quib_P1.gd" id="1_rol52"]
+[ext_resource type="Script" path="res://Scripts/quib_P1.gd" id="1_rol52"]
 [ext_resource type="Texture2D" uid="uid://b2glup2gekh24" path="res://Assets/Sprite/BurbIdle-Sheet.png" id="2_6t5aa"]
 [ext_resource type="Texture2D" uid="uid://blw80qddr4n8b" path="res://Assets/Sprite/BurbRunning-Sheet.png" id="3_vgqql"]
 
@@ -125,9 +125,8 @@ script = ExtResource("1_rol52")
 position = Vector2(1, -9)
 scale = Vector2(0.5625, 0.5625)
 sprite_frames = SubResource("SpriteFrames_ajd6w")
-animation = &"Running"
+animation = &"Idle"
 autoplay = "Idle"
-frame_progress = 0.00234512
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -5)

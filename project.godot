@@ -13,7 +13,7 @@ config_version=5
 config/name="BazaaStudioGameV1"
 config/version="1.0.0"
 run/main_scene="res://Scenes/main_menu.tscn"
-config/features=PackedStringArray("4.4", "Forward Plus")
+config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
 [aseprite_importers]
