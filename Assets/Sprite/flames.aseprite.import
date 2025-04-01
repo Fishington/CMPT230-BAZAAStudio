@@ -3,11 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://mctdicuak5s4"
-valid=false
+path="res://.godot/imported/flames.aseprite-0691fb9d4ace3cf62c96cd1d0cecda9d.ctex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
 source_file="res://Assets/Sprite/flames.aseprite"
+dest_files=["res://.godot/imported/flames.aseprite-0691fb9d4ace3cf62c96cd1d0cecda9d.ctex"]
 
 [params]
 

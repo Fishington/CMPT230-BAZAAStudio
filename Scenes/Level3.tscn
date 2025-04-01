@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=4 uid="uid://bs32ecb77qu66"]
+[gd_scene load_steps=10 format=4 uid="uid://bs32ecb77qu66"]
 
 [ext_resource type="Texture2D" uid="uid://dc6s6fs0irn0i" path="res://Assets/brackeys_platformer_assets/sprites/world_tileset.png" id="1_7tk33"]
 [ext_resource type="Texture2D" uid="uid://bvuseb58udbo" path="res://Assets/Kenny-Tiny-Town/Tilemap/tilemap_packed.png" id="2_44apn"]
 [ext_resource type="PackedScene" uid="uid://dhkppmbnwlh25" path="res://Scenes/player.tscn" id="3_084pi"]
-[ext_resource type="Texture2D" uid="uid://cbxuaor88o3yq" path="res://Assets/Sprite/Coin_Texture.png" id="4_43mlh"]
 [ext_resource type="Script" uid="uid://btl35s0o2xh8r" path="res://Scripts/fib_P2.gd" id="5_44apn"]
+[ext_resource type="PackedScene" uid="uid://cupteev40ejqr" path="res://coin.tscn" id="6_43mlh"]
+[ext_resource type="PackedScene" uid="uid://bnlb2k8sxegro" path="res://Scenes/player2.tscn" id="6_084pi"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1mrc0"]
 texture = ExtResource("1_7tk33")
@@ -341,13 +342,8 @@ tile_map_data = PackedByteArray("AAD2//j/AAAIAAAAAAD3//j/AAAIAAAAAAD4//j/AAAIAAA
 tile_set = SubResource("TileSet_msqgc")
 
 [node name="Player" parent="." instance=ExtResource("3_084pi")]
-position = Vector2(318, 173)
-scale = Vector2(-1, 1)
-
-[node name="CoinTexture" type="Sprite2D" parent="."]
-position = Vector2(136, 50)
-scale = Vector2(0.0316667, 0.0316667)
-texture = ExtResource("4_43mlh")
+position = Vector2(-112, -63)
+script = ExtResource("5_44apn")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(138, 58)
@@ -356,6 +352,20 @@ zoom = Vector2(2, 1.8)
 position_smoothing_enabled = true
 position_smoothing_speed = 10.0
 
-[node name="Player2" parent="." instance=ExtResource("3_084pi")]
-position = Vector2(-100, -78)
-script = ExtResource("5_44apn")
+[node name="Player3" parent="." instance=ExtResource("6_084pi")]
+position = Vector2(312, 174)
+scale = Vector2(-1, 1)
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Coin" parent="Node2D" instance=ExtResource("6_43mlh")]
+position = Vector2(138, 67)
+scale = Vector2(2, 2)
+
+[node name="Coin2" parent="Node2D" instance=ExtResource("6_43mlh")]
+position = Vector2(192, 132)
+scale = Vector2(2, 2)
+
+[node name="Coin3" parent="Node2D" instance=ExtResource("6_43mlh")]
+position = Vector2(270, -85)
+scale = Vector2(2, 2)
