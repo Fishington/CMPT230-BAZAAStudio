@@ -1,13 +1,18 @@
-[gd_scene load_steps=18 format=4 uid="uid://cs6bfyle5niv"]
+[gd_scene load_steps=23 format=4 uid="uid://cs6bfyle5niv"]
 
+[ext_resource type="Script" uid="uid://b6co8yvh85vhm" path="res://Scenes/level_1.gd" id="1_bdlbp"]
 [ext_resource type="Texture2D" uid="uid://dc6s6fs0irn0i" path="res://Assets/brackeys_platformer_assets/sprites/world_tileset.png" id="1_jghel"]
+[ext_resource type="PackedScene" uid="uid://pgctjo0tuxdo" path="res://Scenes/Level2.tscn" id="2_rpty4"]
 [ext_resource type="Texture2D" uid="uid://bvuseb58udbo" path="res://Assets/Kenny-Tiny-Town/Tilemap/tilemap_packed.png" id="2_slnnj"]
+[ext_resource type="PackedScene" uid="uid://bxyh22da6o5gr" path="res://Scenes/main_menu.tscn" id="3_6jj8j"]
 [ext_resource type="PackedScene" uid="uid://dhkppmbnwlh25" path="res://Scenes/player.tscn" id="3_t3or0"]
-[ext_resource type="Script" path="res://Scripts/fib_P2.gd" id="4_slnnj"]
-[ext_resource type="Texture2D" uid="uid://cbxuaor88o3yq" path="res://Assets/Sprite/Coin_Texture.png" id="4_ysn8j"]
+[ext_resource type="Script" uid="uid://btl35s0o2xh8r" path="res://Scripts/fib_P2.gd" id="4_slnnj"]
 [ext_resource type="Texture2D" uid="uid://d2q3qwvax3n8a" path="res://Assets/Lighting/2d_lights_and_shadows_neutral_point_light.webp" id="5_t3or0"]
 [ext_resource type="Texture2D" uid="uid://bb83rdk303cd7" path="res://Assets/Sprite/flames-Sheet.png" id="7_ysn8j"]
 [ext_resource type="PackedScene" uid="uid://bnlb2k8sxegro" path="res://Scenes/player2.tscn" id="8_all0w"]
+[ext_resource type="PackedScene" uid="uid://kao8odxqsf8g" path="res://win_screen.tscn" id="10_2h8qs"]
+[ext_resource type="PackedScene" uid="uid://cupteev40ejqr" path="res://coin.tscn" id="10_bdlbp"]
+[ext_resource type="PackedScene" uid="uid://dqu2t6q2ych1v" path="res://level_completed.tscn" id="11_2h8qs"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1mrc0"]
 texture = ExtResource("1_jghel")
@@ -379,6 +384,9 @@ animations = [{
 }]
 
 [node name="Main" type="Node2D"]
+script = ExtResource("1_bdlbp")
+next_level = ExtResource("2_rpty4")
+main_menu = ExtResource("3_6jj8j")
 
 [node name="LayerHolder" type="Node2D" parent="."]
 
@@ -395,12 +403,12 @@ tile_map_data = PackedByteArray("AAD+/wQAAAACAAQAAAD+/wYAAAADAAcAAAD+/wcAAAADAAc
 tile_set = SubResource("TileSet_msqgc")
 
 [node name="Player3" parent="." instance=ExtResource("8_all0w")]
-position = Vector2(232, 130)
+position = Vector2(232, 135)
 safe_margin = 5.0
 script = ExtResource("4_slnnj")
 
 [node name="PointLight2D2" type="PointLight2D" parent="Player3"]
-position = Vector2(0, -5)
+position = Vector2(95, -21)
 rotation = -3.14159
 scale = Vector2(0.150591, -0.157283)
 color = Color(0.989662, 0.720667, 0.65213, 1)
@@ -416,11 +424,6 @@ scale = Vector2(0.145508, 0.145508)
 color = Color(0.989662, 0.720667, 0.65213, 1)
 energy = 0.73
 texture = ExtResource("5_t3or0")
-
-[node name="CoinTexture" type="Sprite2D" parent="."]
-position = Vector2(72, -90)
-scale = Vector2(0.0316667, 0.0316667)
-texture = ExtResource("4_ysn8j")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(72, 7)
@@ -505,3 +508,30 @@ position = Vector2(-57, 30)
 scale = Vector2(0.276367, 0.276367)
 color = Color(0.989732, 0.614584, 0.278507, 1)
 texture = ExtResource("5_t3or0")
+
+[node name="WinScreen" parent="." instance=ExtResource("10_2h8qs")]
+visible = false
+offset_left = 28.0
+offset_top = -23.0
+offset_right = 28.0
+offset_bottom = -23.0
+
+[node name="Coin" parent="." instance=ExtResource("10_bdlbp")]
+position = Vector2(-38, 119)
+
+[node name="Coin2" parent="." instance=ExtResource("10_bdlbp")]
+position = Vector2(18, 74)
+
+[node name="Coin3" parent="." instance=ExtResource("10_bdlbp")]
+position = Vector2(-52, 24)
+
+[node name="Coin4" parent="." instance=ExtResource("10_bdlbp")]
+position = Vector2(72, -91)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="LevelCompleted" parent="CanvasLayer" instance=ExtResource("11_2h8qs")]
+visible = false
+
+[connection signal="next_level" from="CanvasLayer/LevelCompleted" to="." method="_on_level_completed_next_level"]
+[connection signal="retry" from="CanvasLayer/LevelCompleted" to="." method="_on_level_completed_retry"]

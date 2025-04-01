@@ -76,7 +76,7 @@ layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[connection signal="pressed" from="StartButton" to="StartButton" method="_on_start_pressed"]
 [connection signal="pressed" from="StartButton" to="StartButton" method="_on_pressed"]
+[connection signal="pressed" from="StartButton" to="StartButton" method="_on_start_pressed"]
 [connection signal="pressed" from="ExitButton" to="StartButton" method="_on_exit_button_pressed"]
 [connection signal="pressed" from="ExitButton" to="ExitButton" method="_on_pressed"]

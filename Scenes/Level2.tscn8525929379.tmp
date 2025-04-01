@@ -1,10 +1,9 @@
-[gd_scene load_steps=16 format=4 uid="uid://pgctjo0tuxdo"]
+[gd_scene load_steps=15 format=4 uid="uid://pgctjo0tuxdo"]
 
 [ext_resource type="Texture2D" uid="uid://dc6s6fs0irn0i" path="res://Assets/brackeys_platformer_assets/sprites/world_tileset.png" id="1_5awjf"]
 [ext_resource type="Script" uid="uid://yxp0bouc4nn3" path="res://Scenes/level_2.gd" id="1_70df5"]
 [ext_resource type="PackedScene" uid="uid://bs32ecb77qu66" path="res://Scenes/Level3.tscn" id="2_ejprb"]
 [ext_resource type="Texture2D" uid="uid://bvuseb58udbo" path="res://Assets/Kenny-Tiny-Town/Tilemap/tilemap_packed.png" id="2_n3cqh"]
-[ext_resource type="PackedScene" uid="uid://bxyh22da6o5gr" path="res://Scenes/main_menu.tscn" id="3_au75x"]
 [ext_resource type="PackedScene" uid="uid://dhkppmbnwlh25" path="res://Scenes/player.tscn" id="3_jriq2"]
 [ext_resource type="Script" uid="uid://btl35s0o2xh8r" path="res://Scripts/fib_P2.gd" id="4_u8d1l"]
 [ext_resource type="PackedScene" uid="uid://bnlb2k8sxegro" path="res://Scenes/player2.tscn" id="4_wyron"]
@@ -351,7 +350,6 @@ polygon = PackedVector2Array(66, -28, 96, -28, 96, -32, 66, -32)
 [node name="Main" type="Node2D"]
 script = ExtResource("1_70df5")
 next_level = ExtResource("2_ejprb")
-main_menu = ExtResource("3_au75x")
 
 [node name="MapHolder" type="Node2D" parent="."]
 position = Vector2(16, -8)
@@ -453,33 +451,29 @@ occluder = SubResource("OccluderPolygon2D_5awjf")
 position = Vector2(549, 127)
 
 [node name="Coin2" parent="CoinHolder" instance=ExtResource("9_70df5")]
-position = Vector2(288, 58)
-
-[node name="Coin10" parent="CoinHolder" instance=ExtResource("9_70df5")]
-position = Vector2(352, 46)
+position = Vector2(289, 55)
 
 [node name="Coin3" parent="CoinHolder" instance=ExtResource("9_70df5")]
-position = Vector2(209, 76)
+position = Vector2(208, 67)
 
 [node name="Coin4" parent="CoinHolder" instance=ExtResource("9_70df5")]
-position = Vector2(97, 59)
+position = Vector2(94, 53)
 
 [node name="Coin5" parent="CoinHolder" instance=ExtResource("9_70df5")]
-position = Vector2(79, -66)
+position = Vector2(80, -78)
 
 [node name="Coin6" parent="CoinHolder" instance=ExtResource("9_70df5")]
-position = Vector2(143, -83)
+position = Vector2(143, -87)
 
 [node name="Coin7" parent="CoinHolder" instance=ExtResource("9_70df5")]
-position = Vector2(228, -68)
+position = Vector2(242, -68)
 
 [node name="Coin8" parent="CoinHolder" instance=ExtResource("9_70df5")]
-position = Vector2(336, -83)
+position = Vector2(349, -87)
+
+[node name="Coin9" parent="CoinHolder" instance=ExtResource("9_70df5")]
+position = Vector2(413, -77)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="LevelCompleted" parent="CanvasLayer" instance=ExtResource("10_ejprb")]
-visible = false
-
-[connection signal="next_level" from="CanvasLayer/LevelCompleted" to="." method="_on_level_completed_next_level"]
-[connection signal="retry" from="CanvasLayer/LevelCompleted" to="." method="_on_level_completed_retry"]
