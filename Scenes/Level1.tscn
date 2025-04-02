@@ -401,25 +401,27 @@ position = Vector2(16, -8)
 tile_map_data = PackedByteArray("AAD+/wQAAAACAAQAAAD+/wYAAAADAAcAAAD+/wcAAAADAAcAAAD+/wgAAAADAAcAAAABAAUAAAAGAAYAAAD6/wIAAAAGAAYAAAD3////AAAGAAYAAAD9//z/AAAGAAYAAAD3/wgAAAAGAAYAAAABAAgAAAAIAAgAAAD///v/AAAIAAgAAAAHAAUAAAAIAAYAAAAKAAIAAAAIAAYAAAAPAP//AAAIAAYAAAAFAPv/AAAIAAYAAAAPAAgAAAAIAAYAAAAIAAgAAAAFAAUAAAAIAAcAAAAFAAQAAAAIAAYAAAAFAAQAAAAIAAUAAAAFAAQAAAAIAAQAAAAFAAMAAAA=")
 tile_set = SubResource("TileSet_msqgc")
 
-[node name="Player3" parent="." instance=ExtResource("8_all0w")]
-position = Vector2(232, 135)
-safe_margin = 5.0
-script = ExtResource("4_slnnj")
+[node name="Character" type="Node" parent="."]
 
-[node name="PointLight2D2" type="PointLight2D" parent="Player3"]
-position = Vector2(-5.48363e-06, -15)
-rotation = -3.14159
-scale = Vector2(0.120359, -0.125708)
+[node name="Player" parent="Character" instance=ExtResource("3_t3or0")]
+position = Vector2(0, 129)
+
+[node name="PointLight2D" type="PointLight2D" parent="Character/Player"]
+position = Vector2(0.999998, -11)
+scale = Vector2(0.145508, 0.145508)
 color = Color(0.989662, 0.720667, 0.65213, 1)
 energy = 0.73
 texture = ExtResource("5_t3or0")
 
-[node name="Player" parent="." instance=ExtResource("3_t3or0")]
-position = Vector2(-88, 134)
+[node name="Player3" parent="Character" instance=ExtResource("8_all0w")]
+position = Vector2(134, 134)
+safe_margin = 5.0
+script = ExtResource("4_slnnj")
 
-[node name="PointLight2D" type="PointLight2D" parent="Player"]
-position = Vector2(0.999998, -11)
-scale = Vector2(0.145508, 0.145508)
+[node name="PointLight2D2" type="PointLight2D" parent="Character/Player3"]
+position = Vector2(-5.48363e-06, -15)
+rotation = -3.14159
+scale = Vector2(0.120359, -0.125708)
 color = Color(0.989662, 0.720667, 0.65213, 1)
 energy = 0.73
 texture = ExtResource("5_t3or0")
@@ -509,6 +511,14 @@ color = Color(0.989732, 0.614584, 0.278507, 1)
 texture = ExtResource("5_t3or0")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Warning" type="ColorRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 0, 0, 0.784314)
 
 [node name="LevelCompleted" parent="CanvasLayer" instance=ExtResource("11_2h8qs")]
 visible = false

@@ -3,15 +3,11 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://db4235bv7hchl"
-path="res://.godot/imported/MrGearWing.aseprite-797bf95ff2dba5d6bbdab644f0576ab9.ctex"
-metadata={
-"vram_texture": false
-}
+valid=false
 
 [deps]
 
 source_file="res://Assets/Sprite/MrGearWing.aseprite"
-dest_files=["res://.godot/imported/MrGearWing.aseprite-797bf95ff2dba5d6bbdab644f0576ab9.ctex"]
 
 [params]
 
